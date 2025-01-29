@@ -1,0 +1,125 @@
+/* General container styling */
+.chat-container {
+    display: flex;
+    background-color: #ffffff; /* White background for the main container */
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Sidebar styling */
+  .chat-sidebar {
+    width: 300px; /* Fixed width for the sidebar */
+    background-color: #1976d2; /* Primary blue color */
+    color: white; /* Text color for sidebar */
+    padding: 20px;
+    overflow-y: auto;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+  
+    /* Scrollbar customization */
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 4px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+  }
+  
+  /* User card styling */
+  .user-card {
+    display: flex;
+    align-items: center;
+    background-color: #2196f3; /* Slightly lighter blue */
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  
+    &:hover {
+      background-color: #1565c0; /* Darker blue on hover */
+      transform: scale(1.02);
+    }
+  }
+  
+  .user-profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    border: 2px solid white;
+  }
+  
+  .user-details {
+    flex-grow: 1;
+  
+    .user-name {
+      font-weight: bold;
+      font-size: 16px;
+      color: #ffffff; /* White for the name */
+    }
+  
+    .last-message {
+      font-size: 14px;
+      color: #bbdefb; /* Light blue for the last message */
+      margin-top: 2px;
+    }
+  }
+  
+  .message-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 12px;
+    color: #bbdefb;
+  
+    .unread-count {
+      background-color: white;
+      color: #1976d2;
+      font-weight: bold;
+      border-radius: 50%;
+      padding: 4px 8px;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+  
+    .last-message-time {
+      font-size: 12px;
+      color: #e3f2fd; 
+    }
+  }
+  
+
+  .add-chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1976d2; 
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  
+    &:hover {
+      background-color: #1565c0; 
+      transform: scale(1.1);
+    }
+  }
+  
+ 
+  .loading,
+  .error {
+    text-align: center;
+    font-size: 18px;
+    color: #1976d2;
+    margin: auto;
+  }
+  

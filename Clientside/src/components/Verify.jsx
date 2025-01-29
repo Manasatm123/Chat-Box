@@ -10,6 +10,8 @@ const EmailVerify = () => {
 
     const handleSendEmail = async (e) => {
         e.preventDefault();
+        console.log(email);
+        
         try {
             const response = await axios.post(`${url}/verify`, { email });
             localStorage.setItem('email', email);
